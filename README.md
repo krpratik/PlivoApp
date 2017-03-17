@@ -6,7 +6,7 @@ System Requirements and Specifications – for running on local machine (localho
 
 Ubuntu-16.04   (32 bit) with node, npm installed
 Steps :- (for 32 bit Ubuntu OS)
-1) Download and unzip 1-hello-world.zip
+1) Download and unzip node_modules.tar in the same directory as app.js
 2) Go inside 1-hello-world (cd /1-hello-world)
 3) run following commands in the terminal after step 1 : 
 	a)  Run “npm install”    to install dependencies and node modules
@@ -31,7 +31,7 @@ Steps :- (for 32 bit Ubuntu OS)
 
 
 Note: for running on 64-bit Ubuntu, DIFFERENT COMMAND LINE instructions:
-1) Download and unzip 1-hello-world.zip
+1) Download and unzip node_modules.tar in the same directory as app.js
 2) Go inside 1-hello-world (cd /1-hello-world)
 3) Run npm install to install the dependencies and node modules
 4) npm install jsprim
