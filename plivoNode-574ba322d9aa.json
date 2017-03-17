@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "plivonode-161216",
+  "private_key_id": "574ba322d9aa46e618626c2468a1b2963eb776d8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC78EsmjBhJxIyo\n9LywzNjz1RxmDeRBVAt0qpzoHAyoz6MxcHbjvm/6E6nZ6Te4Uyu5f6DwUJIQaJT/\nXBztVyjCPyDnpxldopl6mOMM4hzjTz4lxVX1BdVNh5bIHmsaWHUSrGuSAz4XQxLt\nVvL0+GgrwAssHvQLJTXEFVCgh2MsGb4Mh6MsOsf+SN7mXL0Cg/Jy5zg6qElPo6eY\nqGemIW6PK+WGcVlmmLteM1i0b/imo85+gb7C3wIVvt3batHwrEimFvLdJCzIFBvV\nfijEUIoS7TAlQr68HlLGpWzwImE2E2csjdeZ23t0zDPVj2gBc8SZQD1J/FCaytnt\n5z6owvIZAgMBAAECggEAP8bruckQ9PeeRDfJULYzaYuId5l/PCwpNw4u8RWTtjXA\nS6a+scqOdW721Nwv7H1M+UY2d1bgOnFDHuVDa8eILWL+553tHblwHAqGAnk5FGpv\nzKGK6ftwxz6cDI1GC0q5b/zTBFnVWE+KvMAk8rzZnP8uy2o1pxKZjFEva0qGfRAq\nbCYZXqscYedGDaBdFaXWFlani1Wt/VhL4jWvraJGx8vLuXhgDlXcBAs+8Cu9kU1q\neIgX/1GVJMYGifen9kmsEQA3K0u2wgty57BqYnT/0lrikYKSsBlXCPAbHYKKy+DE\n4smnlHsULk6hsVRGXuCEBm6SEIfJRf3is8De0y/lgQKBgQDeGY/Pr/EIVIC5xjGP\nJeT8AqlUPFgEDogNhxUTNeCiyoa1s9xq+ZNWQVdmSTxRaJOzN7vbm2cGk7TSPIs2\nPieTnpoC/kod8RxJoAfHdbcbimsDZUcYkjH3LxyeAU67Ks1fNevzj7taRdZUN363\nLErxVsnugOJZ6PUyCBbp4ygtJwKBgQDYn+ZzSuDTxbvl5eVwR2hP/Yoplnjdh8H8\n2TNaqYIgXyLvq31uiGULrMxxLquTYsVhj9wqhyDRQl8AwSZ+EbeC/t/thycEvGv6\nI2ASQ45a7SCw193DyOj15wPJ/NnQmynYCZ500hs9zmvtnXGpPsuZt8AQLVy0mi2X\nHn9zHRnuvwKBgD5DwkqCU7t3HUN3qcss3347LMd9x1sTy9anCSSClUBuMMfd7axb\n3Y9v8BWv8GYOQGIc/OB7N63jWO0bpheF40iCTUELkzHDt594atXjTXs+GfQwv3bG\n/ZUDsy0kxrK4NC0+C7ETmX2cWJLxn+ewVi5Em4XuwgZcxejJ1cqqMUg/AoGBAKOf\nc9QV9OhA7QJjugArD7GL0rZDABxklLRF4zJR4wZMlfjuUZoR0DEXXn0HQXXcHzbo\nEObWloU5WsUZH9gNzc1WcxHZCjHbmLuhyMlC2d34Sr8I7msZ8Ez9J7GEGYomCV8z\nNMsMgKMYrhEW4WlzExqS3rHZcbLA2jrRQHdUvefFAoGBAJzWmli3Xgorpk0uMmQe\nbenM8ttxGC34ux9g0/bdtNR1Pa9lewQq2fUjPgOIruimP+MRDdFf71IMtjoThoI7\ngEEVY8JCeR+nMW2LOCW0DWuWuBLPLTPQOLJXAzIAEATPZ1Z3xmitfH+SX9ZAok5E\nvGw0Wqt0wDsOUCsZZh8MDczc\n-----END PRIVATE KEY-----\n",
+  "client_email": "nodeplivo@plivonode-161216.iam.gserviceaccount.com",
+  "client_id": "103773749660479074332",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nodeplivo%40plivonode-161216.iam.gserviceaccount.com"
+}
