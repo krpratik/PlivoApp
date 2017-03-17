@@ -1,5 +1,4 @@
 # 1 - Deployment of App 
-
 Documentation
 
 PART 1 : Running the code in local server
@@ -15,8 +14,10 @@ Steps :- (for 32 bit Ubuntu OS)
 	c) Run “npm install object-to-xml” (For Xml output of localhost:8080/results)
 	d) Run “npm install body-parser”  (For parsing the response in node js server )
       e) Run “npm install sqlite3”    (For storing the records and history page)
-      f) sudo apt-get update    
-     g) sudu apt-get install ffmpeg    (For converting the recorded sound’s format 		into .flac which is accepted by google speech api)
+      f) npm install  --save @google-cloud/speech
+	g) npm install  --save @google-cloud/translate
+	h) sudo apt-get update    
+    	i) sudu apt-get install ffmpeg    (For converting the recorded sound’s format 		into .flac which is accepted by google speech api)
 4) To finally start the node js  server, run the code:
         node app.js (run “node app.js”  after going inside 1-hello-world/  directory)
 5) On browser, go to link : http://localhost:8080/
@@ -36,7 +37,7 @@ Note: for running on 64-bit Ubuntu, DIFFERENT COMMAND LINE instructions:
 4) npm install jsprim
 5)npm install grpc
 6)npm install  --save @google-cloud/speech
-7)npm install  --save @google-cloud/translat
+7)npm install  --save @google-cloud/translate
 8) npm install jade
 9)npm install object-to-xml
 10)npm install body-parser
