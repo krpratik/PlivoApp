@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width'>
+    <title>Plivo Assignment</title>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <header>
+        <h1>Plivo Assignment</h1>
+      </header>
+      <a id='download'>Download</a>
+      <br><br>
+      <section class='main-controls'>
+        <div id='buttons'>
+          <button class='record'>Record</button>
+          <button class='stop'>Stop</button>
+          <br><br>
+          <form>
+            Select the Language you are gonna record in:
+            <select id='languageSelect'>
+              <option value='en-IN'>English (India)</option>
+              <option value='hi-IN'>Hindi (India)</option>
+              <option value='en-US'>English (United States)</option>
+              <option value='de-DE'>German (Germany)</option>
+              <option value='fr-FR'>French (France)</option>
+              <option value='it-IT'>Italian (Italy)</option>
+              <option value='nl-NL'>Dutch (Netherlands)</option>
+              <option value='el-GR'>Greek (Greece)</option>
+              <option value='ru-RU'>Russian (Russia)</option>
+            </select>
+            <br><br>
+          </form>
+          <h2>Record Audio for less than 7 seconds :D </h2>
+          <br><br>
+          <h3> ~ Developed by Kumar Pratik </h3>
+        </div>
+      </section>
+      <section class='sound-clips'>
+      </section>
+    </div>
+    <script>
+      function post(path, params, method) {
+        method = method || 'post' ;
+        var form = document.createElement('form');
+        form.setAttribute('method', method);
+        form.setAttribute('action', path);
+        for(var key in params) {
+          if(params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement('input');
+            hiddenField.setAttribute('type', 'hidden');
+            hiddenField.setAttribute('name', key);
+            hiddenField.setAttribute('value', params[key]);
+            form.appendChild(hiddenField);
+          };
+        };
+        document.body.appendChild(form);
+        form.submit();
+      };
+      navigator.getUserMedia = ( navigator.getUserMedia ||
+                       navigator.webkitGetUserMedia ||
+                       navigator.mozGetUserMedia ||
+                       navigator.msGetUserMedia);
+      var record = document.querySelector('.record');
+      var stop = document.querySelector('.stop');
+      var soundClips = document.querySelector('.sound-clips');
+      const downloadLink = document.getElementById('download');
+      stop.disabled = true;
+      if (navigator.getUserMedia) {
+        console.log('getUserMedia supported.');
+        var constraints = { audio: true };
+        var chunks = [];
+        var onSuccess = function(stream) {
+          var mediaRecorder = new MediaRecorder(stream);
+          record.onclick = function() {
+            mediaRecorder.start();
+            console.log(mediaRecorder.state);
+            console.log('recorder started');
+            stop.disabled = false;
+            record.disabled = true;
+          };
+          stop.onclick = function() {
+            mediaRecorder.stop();
+            console.log(mediaRecorder.state);
+            console.log('recorder stopped');
+            stop.disabled = true;
+            record.disabled = false;
+          };
+          mediaRecorder.onstop = function(e) {
+            console.log('data available after MediaRecorder.stop() called.');
+            var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus'});
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = 'bakwas.wav';
+            chunks = [];
+            var blobToBase64 = function(blob, cb) {
+              var reader = new FileReader();
+              reader.onload = function() {
+                var dataUrl = reader.result;
+                var base64 = dataUrl.split(',')[1];
+                cb(base64);
+              };
+              reader.readAsDataURL(blob);
+            };
+            blobToBase64(blob, function(base64){
+              var obj = document.getElementById('languageSelect');
+              var Language = obj.options[obj.selectedIndex].value;
+              var update = {'blob': base64, 'language': Language};
+              post('/convert', update);
+            });
+            console.log('recorder stopped');
+          };
+          mediaRecorder.ondataavailable = function(e) {
+            chunks.push(e.data);
+          };
+        };
+        var onError = function(err) {
+          console.log('The following error occured: ' + err);
+        };
+        navigator.getUserMedia(constraints, onSuccess, onError);
+      } else {
+        console.log('getUserMedia not supported on your browser!');
+      };
+    </script>
+  </body>
+</html>
